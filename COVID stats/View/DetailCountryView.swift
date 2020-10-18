@@ -10,7 +10,7 @@ import SwiftUI
 
 struct DetailCountryView: View {
 	
-	@ObservedObject var apiService = APIService<LiveStats>()
+	@ObservedObject var apiService = APIService<[LiveStats]>()
 	
 	// pass in country information
 	let country: Country
