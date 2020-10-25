@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SummaryView: View {
+struct DashboardView: View {
 
 	@ObservedObject var apiService = APIService<Summary>()
 	@State var showCountrySelectionScreen = false
@@ -60,6 +60,8 @@ struct SummaryView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SummaryView()
+		DashboardView()
+			.preferredColorScheme(.dark)
+			.previewDevice("iPhone 11")
     }
 }

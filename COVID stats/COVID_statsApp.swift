@@ -11,7 +11,7 @@ import SwiftUI
 struct COVID_statsApp: App {
     var body: some Scene {
         WindowGroup {
-            SummaryView()
+            DashboardView()
         }
     }
 }

@@ -8,5 +8,7 @@
 import Foundation
 
 struct LiveStats: Decodable {
-	let Cases: Int
+	let Confirmed: Int
+	let Active: Int
+	let Recovered: Int
 }

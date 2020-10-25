@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,8 +13,9 @@
 		A315FADD253C203F0068F45B /* GlobalStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A315FADC253C203F0068F45B /* GlobalStatsView.swift */; };
 		A315FAE0253C260C0068F45B /* CountrySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A315FADF253C260C0068F45B /* CountrySelectionView.swift */; };
 		A315FAE5253C2A410068F45B /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A315FAE4253C2A410068F45B /* UserDefaultKeys.swift */; };
+		A3D15FFE25454556008DA9BE /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = A3D15FFD25454556008DA9BE /* SwiftUICharts */; };
 		A3E3B4CD2532D2B2003ACD81 /* COVID_statsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E3B4CC2532D2B2003ACD81 /* COVID_statsApp.swift */; };
-		A3E3B4CF2532D2B2003ACD81 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E3B4CE2532D2B2003ACD81 /* SummaryView.swift */; };
+		A3E3B4CF2532D2B2003ACD81 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E3B4CE2532D2B2003ACD81 /* DashboardView.swift */; };
 		A3E3B4D12532D2B2003ACD81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3E3B4D02532D2B2003ACD81 /* Assets.xcassets */; };
 		A3E3B4D42532D2B2003ACD81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3E3B4D32532D2B2003ACD81 /* Preview Assets.xcassets */; };
 		A3E3B4DF2532D342003ACD81 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E3B4DE2532D342003ACD81 /* Country.swift */; };
@@ -32,7 +33,7 @@
 		A315FAE4253C2A410068F45B /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 		A3E3B4C92532D2B2003ACD81 /* COVID stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E3B4CC2532D2B2003ACD81 /* COVID_statsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID_statsApp.swift; sourceTree = "<group>"; };
-		A3E3B4CE2532D2B2003ACD81 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		A3E3B4CE2532D2B2003ACD81 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		A3E3B4D02532D2B2003ACD81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3E3B4D32532D2B2003ACD81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A3E3B4D52532D2B2003ACD81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3D15FFE25454556008DA9BE /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +114,7 @@
 		A3E3B4DC2532D2FF003ACD81 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A3E3B4CE2532D2B2003ACD81 /* SummaryView.swift */,
+				A3E3B4CE2532D2B2003ACD81 /* DashboardView.swift */,
 				A3E3B4E72532DB65003ACD81 /* DetailCountryView.swift */,
 				A315FADC253C203F0068F45B /* GlobalStatsView.swift */,
 				A315FADF253C260C0068F45B /* CountrySelectionView.swift */,
@@ -155,6 +157,9 @@
 			dependencies = (
 			);
 			name = "COVID stats";
+			packageProductDependencies = (
+				A3D15FFD25454556008DA9BE /* SwiftUICharts */,
+			);
 			productName = "COVID stats";
 			productReference = A3E3B4C92532D2B2003ACD81 /* COVID stats.app */;
 			productType = "com.apple.product-type.application";
@@ -182,6 +187,9 @@
 				Base,
 			);
 			mainGroup = A3E3B4C02532D2B2003ACD81;
+			packageReferences = (
+				A3D15FFC25454556008DA9BE /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = A3E3B4CA2532D2B2003ACD81 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -208,7 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3E3B4CF2532D2B2003ACD81 /* SummaryView.swift in Sources */,
+				A3E3B4CF2532D2B2003ACD81 /* DashboardView.swift in Sources */,
 				A315FADA253C1F420068F45B /* Int+Abbr.swift in Sources */,
 				A3E3B4DF2532D342003ACD81 /* Country.swift in Sources */,
 				A315FAE0253C260C0068F45B /* CountrySelectionView.swift in Sources */,
@@ -408,6 +416,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A3D15FFC25454556008DA9BE /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A3D15FFD25454556008DA9BE /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3D15FFC25454556008DA9BE /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A3E3B4C12532D2B2003ACD81 /* Project object */;
 }
